@@ -10,6 +10,11 @@ This project integrates a polished TailwindCSS frontend, dynamic JavaScript inte
 
 This is a perfect full-stack project for portfolios, academic submissions, or real-world event management systems.
 
+
+
+
+
+
 🚀 Features Overview
 🎨 Frontend (UI/UX)
 
@@ -65,6 +70,15 @@ Automatic database setup (setup_database.php)
 
 Database update scripts (update_db.php)
 
+
+
+
+
+
+
+
+
+
 🎟️ Event Management
 
 Users and organizers can:
@@ -79,6 +93,10 @@ Check event details
 
 Filter and search events (from JS logic)
 
+
+
+
+
 💬 Support & Help System
 
 Support center UI (support.html) includes:
@@ -92,6 +110,10 @@ Community forum
 Popular help topics
 
 Support article templates (support-article.php)
+
+
+
+
 
 🔧 JavaScript Features
 
@@ -113,41 +135,83 @@ Section-based animations
 
 
 
+
+
+
+
+
 📁 Project Structure
 EventHub/
 │── index.html
+
 │── about.html
+
 │── events.html
+
 │── blog.html
+
 │── pricing.html
+
 │── faq.html
+
 │── contact.html
+
 │── support.html
+
 │── create.html
+
 │── signin.html
+
 │── signup.html
+
 │── styles.css
+
 │── script.js
+
 │── favicon.png
+
 │── event_details.php
+
 │── create_event.php
+
 │── header.php
+
 │── footer.php
+
 │── login.php
+
 │── register.php
+
 │── signin.php
+
 │── signup.php
+
 │── logout.php
+
 │── user_dashboard.php
+
 │── organizer_dashboard.php
+
 │── support.php
+
 │── support-article.php
+
 │── support-category.php
+
 │── config.php
+
 │── database.php
+
 │── update_db.php
+
 │── setup_database.php
+
 └── assets/
+
+
+
+
+
 
 🛠️ Tech Stack
 Technology	Purpose
@@ -158,6 +222,14 @@ Custom CSS	Animations and enhancements
 PHP	Backend logic & authentication
 MySQL	Database management
 FontAwesome	Icons
+
+
+
+
+
+
+
+
 🧩 Installation & Setup
 ▶ Frontend Preview Only
 
