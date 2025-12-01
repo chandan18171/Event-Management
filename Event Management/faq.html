@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - EventHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-2xl text-yellow-300"></i>
+                <a href="index.html" class="text-2xl font-bold">EventHub</a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="events.html" class="hover:text-yellow-300 transition">Events</a>
+                <a href="create.html" class="hover:text-yellow-300 transition">Create</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="signin.html" class="py-2 px-4 border border-white text-white hover:bg-white hover:text-indigo-800 rounded-lg transition font-semibold">Sign In</a>
+                <a href="signup.html" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-indigo-900 rounded-lg shadow-md transition font-semibold">Sign Up</a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-700 py-12 text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold">Frequently Asked Questions</h1>
+            <p class="mt-2 text-lg">Find answers to the most common questions about EventHub</p>
+        </div>
+    </header>
+
+    <!-- FAQ Search Section -->
+    <section class="py-10 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" placeholder="Search questions..." class="w-full px-5 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <button class="absolute right-3 top-3 text-gray-500 hover:text-indigo-600 transition">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-8 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="py-2 px-5 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition">All Questions</button>
+                <button class="py-2 px-5 bg-white text-indigo-700 rounded-full font-medium hover:bg-indigo-100 transition">Account</button>
+                <button class="py-2 px-5 bg-white text-indigo-700 rounded-full font-medium hover:bg-indigo-100 transition">Pricing</button>
+                <button class="py-2 px-5 bg-white text-indigo-700 rounded-full font-medium hover:bg-indigo-100 transition">Events</button>
+                <button class="py-2 px-5 bg-white text-indigo-700 rounded-full font-medium hover:bg-indigo-100 transition">Features</button>
+                <button class="py-2 px-5 bg-white text-indigo-700 rounded-full font-medium hover:bg-indigo-100 transition">Technical</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Main Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Account Questions -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Account & Registration</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- FAQ Item 1 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">How do I create an account on EventHub?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">Creating an account is simple! Click on the "Sign Up" button in the navigation bar. Fill in your details such as name, email, and password. Verify your email address by clicking on the link sent to your inbox, and you're all set to start using EventHub.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">Can I use EventHub without creating an account?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">You can browse events and view event details without an account. However, to create events, register for events, or use advanced features, you'll need to create a free account. This helps us provide a more personalized experience and secure your event data.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 3 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">How do I reset my password?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">If you've forgotten your password, click on the "Sign In" button, then select "Forgot Password?" link below the login form. Enter your email address, and we'll send you a link to reset your password. Follow the instructions in the email to create a new password.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Events Questions -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Creating & Managing Events</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- FAQ Item 4 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">How do I create an event on EventHub?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">After signing in, click on the "Create" button in the navigation menu. Fill out the event details such as name, date, time, location, and description. You can also add custom fields, ticket types, and promotional images. Once complete, click "Create Event" to publish your event.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 5 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">Can I edit my event after publishing it?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">Yes, you can edit most details of your event after publishing. Navigate to your event dashboard, select the event you want to modify, and click on "Edit Event." Keep in mind that certain changes, especially to date, time, or location, will send notifications to registered attendees.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 6 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">How do I cancel an event?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">To cancel an event, go to your event dashboard, select the event, and click on "Manage Event." In the event settings, you'll find a "Cancel Event" option. You'll be asked to provide a reason for cancellation, which will be included in notifications to registered attendees. Keep in mind that cancellation policies regarding refunds apply.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tickets & Registration -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Tickets & Registration</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- FAQ Item 7 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">How do I set up ticketing for my event?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">When creating or editing your event, navigate to the "Tickets" section. Here you can create different ticket types (e.g., General Admission, VIP, Early Bird), set prices, and establish available quantities. You can also create free tickets or donation-based options if your event doesn't have a fixed price.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 8 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">What payment methods are accepted for event registrations?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">EventHub accepts major credit cards (Visa, Mastercard, American Express), PayPal, and in some regions, Apple Pay and Google Pay. Event organizers can choose which payment methods to enable for their events. All payments are processed securely through our payment providers.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 9 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">How do attendees receive their tickets?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">After registering and completing payment, attendees receive an email confirmation with their ticket(s) attached as a PDF. Tickets include a unique QR code for check-in. Attendees can also access their tickets through their EventHub account under "My Tickets." For convenience, we offer options to add the event to calendars and download tickets to mobile wallet apps.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pricing & Billing -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Pricing & Billing</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- FAQ Item 10 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">How much does it cost to use EventHub?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">EventHub offers a range of pricing plans to meet different needs. Our Basic plan is free and allows you to create events with up to 50 attendees. For larger events, our Pro ($29/month) and Premium ($99/month) plans offer advanced features, higher attendee limits, and more customization options. Visit our <a href="pricing.html" class="text-indigo-600 hover:text-indigo-800">Pricing page</a> for detailed information.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 11 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">What are the transaction fees for paid events?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">For paid events, there is a standard processing fee of 2.5% + $0.99 per transaction. This fee covers payment processing costs. Premium plan subscribers enjoy reduced fees of 2% + $0.99 per transaction. You can choose to absorb these fees or pass them on to attendees during checkout.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 12 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                                <span class="text-xl font-bold text-gray-800">How do I get paid for ticket sales?</span>
+                                <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content px-6 pb-6 hidden">
+                                <p class="text-gray-600">Payments from ticket sales are processed according to your payment schedule. By default, funds are disbursed 5 days after your event. Pro and Premium subscribers can opt for earlier payouts (weekly or bi-weekly). To receive payments, you need to set up your payout method in your account settings, which can be a bank account or PayPal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Still have questions?</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Our support team is ready to help with any questions not covered in our FAQ.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact.html" class="py-3 px-8 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 hover:scale-105 hover:shadow-xl transition-all duration-300">Contact Support</a>
+                <a href="support.html" class="py-3 px-8 bg-white text-indigo-700 font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all duration-300">Visit Help Center</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-calendar-check text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold">EventHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating memorable events made simple.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white transition">Support Center</a></li>
+                        <li><a href="api.html" class="text-gray-400 hover:text-white transition">API Documentation</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest events and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 rounded-r-lg px-4 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="cookies.html" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Toggle functionality
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                    
+                    // Close other open FAQs (optional)
+                    faqToggles.forEach(otherToggle => {
+                        if (otherToggle !== toggle) {
+                            const otherContent = otherToggle.nextElementSibling;
+                            const otherIcon = otherToggle.querySelector('i');
+                            
+                            if (!otherContent.classList.contains('hidden')) {
+                                otherContent.classList.add('hidden');
+                                otherIcon.classList.remove('rotate-180');
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Category filter functionality
+            const categoryButtons = document.querySelectorAll('.py-2.px-5');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Reset all buttons
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('bg-indigo-600', 'text-white');
+                        btn.classList.add('bg-white', 'text-indigo-700');
+                    });
+                    
+                    // Highlight selected button
+                    this.classList.remove('bg-white', 'text-indigo-700');
+                    this.classList.add('bg-indigo-600', 'text-white');
+                    
+                    // Add category filtering logic here...
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

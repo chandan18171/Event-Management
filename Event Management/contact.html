@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EventHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-2xl text-yellow-300"></i>
+                <a href="index.html" class="text-2xl font-bold">EventHub</a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="events.html" class="hover:text-yellow-300 transition">Events</a>
+                <a href="create.html" class="hover:text-yellow-300 transition">Create</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition text-yellow-300">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="signup.html" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-indigo-900 rounded-lg shadow-md transition font-semibold">Sign Up</a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <div class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-xl max-w-3xl mx-auto text-gray-300">Have questions or feedback? We'd love to hear from you.</p>
+        </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Contact Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Our Location</h3>
+                    <p class="text-gray-600">123 Event Street, Suite 400<br>San Francisco, CA 94103<br>United States</p>
+                </div>
+                
+                <!-- Contact Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-phone-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Phone Number</h3>
+                    <p class="text-gray-600">Support: +1 (555) 123-4567<br>Sales: +1 (555) 765-4321<br>Mon-Fri: 9am - 6pm PST</p>
+                </div>
+                
+                <!-- Contact Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-envelope text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Email Address</h3>
+                    <p class="text-gray-600">support@eventhub.com<br>sales@eventhub.com<br>info@eventhub.com</p>
+                </div>
+            </div>
+            
+            <!-- Contact Form & Map -->
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+                    <p class="text-gray-600 mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form id="contactForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="firstName" class="block text-gray-700 font-medium mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Your first name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Your last name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this regarding?" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="py-3 px-6 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 font-semibold">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Map -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Find Us</h2>
+                    <p class="text-gray-600 mb-8">Visit our office in the heart of San Francisco.</p>
+                    <div class="rounded-xl overflow-hidden shadow-lg h-96 bg-gray-200">
+                        <!-- Here you would typically embed a Google Maps iframe -->
+                        <!-- For this example, I'm using a placeholder image -->
+                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=San+Francisco,CA&zoom=13&size=600x400&key=YOUR_API_KEY" alt="Map Location" class="w-full h-full object-cover">
+                        <!-- Note: You would need to replace YOUR_API_KEY with a valid Google Maps API key -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Frequently Asked Questions</h2>
+                <p class="text-gray-600 mt-2">Find quick answers to common questions</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">How do I create an event on EventHub?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Creating an event is simple! After signing up and logging in, click on the "Create Event" button in your dashboard. Fill out the event details such as name, date, time, location, and description. You can also add custom fields, ticket types, and promotional images. Once complete, click "Publish" to make your event live.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">EventHub supports a wide range of payment methods including all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay, and Google Pay. For certain regions, we also support bank transfers and local payment options. All payments are processed securely through our PCI-compliant payment system.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">How can I promote my event effectively?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">EventHub offers multiple promotion tools to help you reach your target audience. You can create custom social media posts, email campaigns, and promotional codes directly from your event dashboard. Our platform also includes SEO optimization for better searchability, and featured event opportunities for additional visibility. Check out our Event Marketing Guide in the Resources section for more tips.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">What is your refund policy?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Refund policies are set by event organizers, not EventHub directly. Each event can have its own refund policy which is displayed during the ticket purchasing process. As an organizer, you can set your preferred refund policy when creating your event. Options include fully refundable up to a certain date, partially refundable, or non-refundable. We recommend being clear about your policy to maintain good relationships with attendees.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">Can I integrate EventHub with other tools?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Yes! EventHub offers integrations with many popular tools including Mailchimp, HubSpot, Salesforce, Slack, Zoom, and various CRM systems. We also provide a REST API for custom integrations. Visit our Integrations page to see the full list of available integrations and how to set them up.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <p class="text-gray-600 mb-4">Still have questions?</p>
+                <a href="#" class="py-3 px-8 bg-indigo-100 text-indigo-700 rounded-full hover:bg-indigo-200 transition duration-300 font-semibold inline-flex items-center">
+                    Visit our Support Center
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Follow Us</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Stay connected with us on social media for the latest updates, event tips, and inspiration.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-2xl hover:bg-blue-700 transition-transform duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-400 text-white text-2xl hover:bg-blue-500 transition-transform duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-2xl hover:from-purple-700 hover:to-pink-600 transition-transform duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-16 h-16 rounded-full bg-red-600 text-white text-2xl hover:bg-red-700 transition-transform duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-700 text-white text-2xl hover:bg-blue-800 transition-transform duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Popular Events</h2>
+                <p class="text-gray-600 mt-2">Check out these trending events</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Event Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Marathon Challenge" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-indigo-500 text-white font-bold py-1 px-3 rounded-full">
+                            $75
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-sm font-semibold py-1 px-3 rounded-full">Sports</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> Nov 12, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Marathon Challenge 2023</h3>
+                        <p class="text-gray-600 mb-4">Challenge yourself in this city-wide marathon with athletes from around the world.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Boston, MA</span>
+                            </div>
+                            <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 font-medium" data-event-id="4">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556125574-d7f27ec36a06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Modern Art Exhibition" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-indigo-500 text-white font-bold py-1 px-3 rounded-full">
+                            $22
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-red-100 text-red-800 text-sm font-semibold py-1 px-3 rounded-full">Art</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> Nov 18, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Modern Art Exhibition</h3>
+                        <p class="text-gray-600 mb-4">Experience contemporary art from emerging and established artists in this stunning exhibition.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">San Francisco, CA</span>
+                            </div>
+                            <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 font-medium" data-event-id="5">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Entrepreneurship Workshop" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-indigo-900 font-bold py-1 px-3 rounded-full">
+                            Free
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold py-1 px-3 rounded-full">Business</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> Dec 5, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Entrepreneurship Workshop</h3>
+                        <p class="text-gray-600 mb-4">Learn key strategies for growing your business from successful founders.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Chicago, IL</span>
+                            </div>
+                            <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 font-medium" data-event-id="3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="events.html" class="py-3 px-8 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 font-semibold inline-flex items-center">
+                    View All Events
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Modal -->
+    <div id="event-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl shadow-xl max-w-3xl w-full mx-4 overflow-hidden">
+            <div class="relative">
+                <img id="modal-image" src="" alt="Event" class="w-full h-64 object-cover">
+                <span id="modal-category" class="absolute top-4 left-4 bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-3 rounded-full"></span>
+                <button id="close-modal" class="absolute top-4 right-4 bg-black bg-opacity-50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-75">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 id="modal-title" class="text-2xl font-bold text-gray-800"></h2>
+                    <span id="modal-date" class="text-sm text-gray-600"></span>
+                </div>
+                <div class="mb-6">
+                    <p id="modal-description" class="text-gray-700 leading-relaxed mb-4"></p>
+                    <div class="flex items-center space-x-1">
+                        <i class="fas fa-map-marker-alt text-red-500"></i>
+                        <span id="modal-location" class="text-gray-600"></span>
+                    </div>
+                </div>
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Event Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Time</h4>
+                                <p id="modal-time" class="text-gray-600">7:00 PM - 10:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-user-friends text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Organizer</h4>
+                                <p id="modal-organizer" class="text-gray-600">EventHub</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-ticket-alt text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Price</h4>
+                                <p id="modal-price" class="text-gray-600">$25 - $75</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Capacity</h4>
+                                <p id="modal-capacity" class="text-gray-600">250 people</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between">
+                    <button class="py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                        <i class="far fa-heart mr-1"></i> Save
+                    </button>
+                    <button class="py-2 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition">
+                        <i class="fas fa-ticket-alt mr-1"></i> Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-calendar-check text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold">EventHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating memorable events made simple.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Event Planning Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Support Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest events and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 rounded-r-lg px-4 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggles
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Basic validation
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (!email || !message) {
+                        alert('Please fill out all required fields.');
+                        return;
+                    }
+                    
+                    // Simulate form submission
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    submitButton.innerHTML = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    setTimeout(() => {
+                        // Reset form
+                        contactForm.reset();
+                        
+                        // Show success message
+                        const formContainer = contactForm.parentNode;
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'bg-green-100 text-green-700 p-4 rounded-lg mt-6';
+                        successMessage.innerHTML = '<p class="font-semibold">Thank you for your message!</p><p>We\'ll get back to you as soon as possible.</p>';
+                        
+                        formContainer.appendChild(successMessage);
+                        
+                        // Reset button
+                        submitButton.innerHTML = 'Send Message <i class="fas fa-paper-plane ml-2"></i>';
+                        submitButton.disabled = false;
+                        
+                        // Remove success message after 5 seconds
+                        setTimeout(() => {
+                            successMessage.remove();
+                        }, 5000);
+                    }, 1500);
+                });
+            }
+            
+            // Event database (simulated)
+            const eventData = {
+                1: {
+                    title: "Web Development Summit",
+                    category: "Tech",
+                    date: "Oct 15-17, 2023",
+                    time: "9:00 AM - 5:00 PM",
+                    location: "New York City",
+                    description: "Join industry leaders for the latest in web technologies and development practices. This summit brings together experts from around the world to discuss cutting-edge techniques, tools, and trends in web development. Network with professionals, attend workshops, and learn from the best in the industry.",
+                    image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "TechEvents Inc.",
+                    price: "$199 - $299",
+                    capacity: "500 people"
+                },
+                2: {
+                    title: "Summer Music Festival",
+                    category: "Music",
+                    date: "Nov 5-6, 2023",
+                    time: "12:00 PM - 11:00 PM",
+                    location: "Los Angeles",
+                    description: "Three days of amazing performances from top artists across multiple genres. Experience live music, food vendors, art installations, and more in this unforgettable outdoor festival. Bring your friends and enjoy the atmosphere of one of the biggest music events of the year.",
+                    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "MusicFest Productions",
+                    price: "$149 - $349",
+                    capacity: "10,000 people"
+                },
+                3: {
+                    title: "Entrepreneurship Workshop",
+                    category: "Business",
+                    date: "Dec 5, 2023",
+                    time: "10:00 AM - 4:00 PM",
+                    location: "Chicago, IL",
+                    description: "Learn key strategies for growing your business from successful founders. This workshop is designed for both aspiring and established entrepreneurs looking to take their business to the next level. Gain insights on funding, marketing strategies, team building, and scaling operations.",
+                    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+                    organizer: "Business Growth Network",
+                    price: "Free",
+                    capacity: "120 people"
+                },
+                4: {
+                    title: "Marathon Challenge 2023",
+                    category: "Sports",
+                    date: "Nov 12, 2023",
+                    time: "7:00 AM - 2:00 PM",
+                    location: "Boston, MA",
+                    description: "Challenge yourself in this city-wide marathon with athletes from around the world. Run through historic streets and neighborhoods while challenging yourself to reach new personal records. This USATF-certified course features aid stations, medical support, and cheering crowds throughout.",
+                    image: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+                    organizer: "Boston Athletic Association",
+                    price: "$75 - $150",
+                    capacity: "25,000 runners"
+                },
+                5: {
+                    title: "Modern Art Exhibition",
+                    category: "Art",
+                    date: "Nov 18, 2023",
+                    time: "10:00 AM - 8:00 PM",
+                    location: "San Francisco, CA",
+                    description: "Experience contemporary art from emerging and established artists in this stunning exhibition. The exhibition showcases a diverse range of mediums including paintings, sculptures, digital art, and installations that challenge conventional perspectives and inspire creativity.",
+                    image: "https://images.unsplash.com/photo-1556125574-d7f27ec36a06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "SF Modern Gallery",
+                    price: "$22",
+                    capacity: "200 people per hour"
+                },
+                6: {
+                    title: "International Food Festival",
+                    category: "Food",
+                    date: "Nov 20, 2023",
+                    time: "11:00 AM - 9:00 PM",
+                    location: "Miami",
+                    description: "Taste cuisine from around the world as top chefs showcase their signature dishes. Explore over 50 food stalls representing cuisines from all continents, watch cooking demonstrations, and participate in culinary workshops. A feast for all the senses!",
+                    image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "Global Flavors Events",
+                    price: "$25 entry + food purchases",
+                    capacity: "5,000 people"
+                }
+            };
+            
+            // Event details modal functionality
+            const viewDetailsButtons = document.querySelectorAll('.view-details');
+            const modal = document.getElementById('event-modal');
+            const closeModalButton = document.getElementById('close-modal');
+            
+            // Open modal with event details
+            if (viewDetailsButtons.length > 0) {
+                viewDetailsButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const eventId = this.getAttribute('data-event-id');
+                        const event = eventData[eventId];
+                        
+                        if (event) {
+                            // Populate modal with event data
+                            document.getElementById('modal-image').src = event.image;
+                            document.getElementById('modal-category').textContent = event.category;
+                            document.getElementById('modal-title').textContent = event.title;
+                            document.getElementById('modal-date').textContent = event.date;
+                            document.getElementById('modal-description').textContent = event.description;
+                            document.getElementById('modal-location').textContent = event.location;
+                            document.getElementById('modal-time').textContent = event.time;
+                            document.getElementById('modal-organizer').textContent = event.organizer;
+                            document.getElementById('modal-price').textContent = event.price;
+                            document.getElementById('modal-capacity').textContent = event.capacity;
+                            
+                            // Show modal
+                            modal.classList.remove('hidden');
+                            document.body.style.overflow = 'hidden'; // Prevent scrolling
+                        }
+                    });
+                });
+            }
+            
+            // Close modal
+            if (closeModalButton && modal) {
+                closeModalButton.addEventListener('click', function() {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore scrolling
+                });
+                
+                // Close modal when clicking outside the content
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

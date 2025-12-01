@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EventHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-2xl text-yellow-300"></i>
+                <a href="index.html" class="text-2xl font-bold">EventHub</a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="events.html" class="hover:text-yellow-300 transition">Events</a>
+                <a href="create.html" class="hover:text-yellow-300 transition">Create</a>
+                <a href="about.html" class="hover:text-yellow-300 transition text-yellow-300">About</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="signup.html" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-indigo-900 rounded-lg shadow-md transition font-semibold">Sign Up</a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <div class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">About Us</h1>
+            <p class="text-xl max-w-3xl mx-auto text-gray-300">Learn more about EventHub and the team behind the platform.</p>
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-6">EventHub was founded in 2020 with a simple mission: to make event planning and hosting accessible to everyone. What started as a small project by a group of event enthusiasts has grown into a comprehensive platform used by thousands of organizers worldwide.</p>
+                    <p class="text-gray-600 mb-6">We recognized that traditional event management tools were either too complex or too limited for most users. By focusing on intuitive design and powerful features, we've created a solution that works for events of all sizes – from intimate gatherings to large-scale conferences.</p>
+                    <p class="text-gray-600">Today, EventHub powers over 10,000 events annually across 30+ countries, and we're just getting started. Our team continues to innovate and improve the platform based on feedback from our vibrant community of users.</p>
+                </div>
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Team Working" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Our Values</h2>
+                <p class="text-gray-600 mt-2">The principles that guide everything we do</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-handshake text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">User-Focused</h3>
+                    <p class="text-gray-600">We put our users first in everything we build. Every feature is designed with the needs of event organizers and attendees in mind.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Innovation</h3>
+                    <p class="text-gray-600">We're constantly looking for new ways to improve and enhance the event experience, pushing the boundaries of what's possible.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-lock text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Trust & Security</h3>
+                    <p class="text-gray-600">We maintain the highest standards of data protection and privacy, ensuring that your events and attendee information are always secure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Meet Our Team</h2>
+                <p class="text-gray-600 mt-2">The passionate people behind EventHub</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Brown - CEO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Michael Brown</h3>
+                        <p class="text-indigo-600 font-medium mb-3">CEO & Co-Founder</p>
+                        <p class="text-gray-600 mb-4">Former event organizer with 15+ years of experience in the industry.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson - CTO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Sarah Johnson</h3>
+                        <p class="text-indigo-600 font-medium mb-3">CTO & Co-Founder</p>
+                        <p class="text-gray-600 mb-4">Tech leader with background in scaling platforms for millions of users.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Chen - Head of Product" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">David Chen</h3>
+                        <p class="text-indigo-600 font-medium mb-3">Head of Product</p>
+                        <p class="text-gray-600 mb-4">Product strategist focused on creating user-centered experiences.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez - Marketing Director" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Emily Rodriguez</h3>
+                        <p class="text-indigo-600 font-medium mb-3">Marketing Director</p>
+                        <p class="text-gray-600 mb-4">Marketing expert with passion for community building and growth.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Our Journey</h2>
+                <p class="text-gray-300">Key milestones in EventHub's growth</p>
+            </div>
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-500"></div>
+                
+                <!-- Milestone 1 -->
+                <div class="relative mb-12">
+                    <div class="flex items-center justify-center">
+                        <div class="z-10 bg-indigo-500 rounded-full h-10 w-10 flex items-center justify-center">
+                            <i class="fas fa-flag-checkered text-white"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl p-6 mt-4 shadow-lg max-w-xl mx-auto">
+                        <div class="font-bold text-xl mb-1">2020</div>
+                        <h3 class="text-2xl font-bold mb-2 text-indigo-300">EventHub Founded</h3>
+                        <p class="text-gray-300">Our journey began with a simple idea: to make event management accessible to everyone.</p>
+                    </div>
+                </div>
+                
+                <!-- Milestone 2 -->
+                <div class="relative mb-12">
+                    <div class="flex items-center justify-center">
+                        <div class="z-10 bg-indigo-500 rounded-full h-10 w-10 flex items-center justify-center">
+                            <i class="fas fa-users text-white"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl p-6 mt-4 shadow-lg max-w-xl mx-auto">
+                        <div class="font-bold text-xl mb-1">2021</div>
+                        <h3 class="text-2xl font-bold mb-2 text-indigo-300">1,000 Active Users</h3>
+                        <p class="text-gray-300">We reached our first major milestone of 1,000 active event organizers on the platform.</p>
+                    </div>
+                </div>
+                
+                <!-- Milestone 3 -->
+                <div class="relative mb-12">
+                    <div class="flex items-center justify-center">
+                        <div class="z-10 bg-indigo-500 rounded-full h-10 w-10 flex items-center justify-center">
+                            <i class="fas fa-rocket text-white"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl p-6 mt-4 shadow-lg max-w-xl mx-auto">
+                        <div class="font-bold text-xl mb-1">2022</div>
+                        <h3 class="text-2xl font-bold mb-2 text-indigo-300">Series A Funding</h3>
+                        <p class="text-gray-300">Secured $5 million in Series A funding to accelerate growth and product development.</p>
+                    </div>
+                </div>
+                
+                <!-- Milestone 4 -->
+                <div class="relative">
+                    <div class="flex items-center justify-center">
+                        <div class="z-10 bg-indigo-500 rounded-full h-10 w-10 flex items-center justify-center">
+                            <i class="fas fa-globe text-white"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl p-6 mt-4 shadow-lg max-w-xl mx-auto">
+                        <div class="font-bold text-xl mb-1">2023</div>
+                        <h3 class="text-2xl font-bold mb-2 text-indigo-300">Global Expansion</h3>
+                        <p class="text-gray-300">Expanded to 30+ countries and supporting 10,000+ events annually worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Join Our Team</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">We're always looking for talented individuals who are passionate about events and technology. Check out our open positions and become part of our journey.</p>
+            <a href="#" class="py-3 px-8 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 font-semibold inline-flex items-center">
+                View Open Positions
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Upcoming Events</h2>
+                <p class="text-gray-600 mt-2">Don't miss these exciting events</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Event Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Web Development Summit" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-indigo-500 text-white font-bold py-1 px-3 rounded-full">
+                            $199
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-3 rounded-full">Tech</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> Oct 15-17, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Web Development Summit</h3>
+                        <p class="text-gray-600 mb-4">Join industry leaders for the latest in web technologies and development practices.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">New York City</span>
+                            </div>
+                            <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 font-medium" data-event-id="1">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Summer Music Festival" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-indigo-500 text-white font-bold py-1 px-3 rounded-full">
+                            $149
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-pink-100 text-pink-800 text-sm font-semibold py-1 px-3 rounded-full">Music</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> Nov 5-6, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Summer Music Festival</h3>
+                        <p class="text-gray-600 mb-4">Three days of amazing performances from top artists across multiple genres.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Los Angeles</span>
+                            </div>
+                            <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 font-medium" data-event-id="2">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="International Food Festival" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-indigo-500 text-white font-bold py-1 px-3 rounded-full">
+                            $25
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold py-1 px-3 rounded-full">Food</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> Nov 20, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">International Food Festival</h3>
+                        <p class="text-gray-600 mb-4">Taste cuisine from around the world as top chefs showcase their signature dishes.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Miami</span>
+                            </div>
+                            <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 font-medium" data-event-id="6">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="events.html" class="py-3 px-8 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 font-semibold inline-flex items-center">
+                    View All Events
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Modal -->
+    <div id="event-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl shadow-xl max-w-3xl w-full mx-4 overflow-hidden">
+            <div class="relative">
+                <img id="modal-image" src="" alt="Event" class="w-full h-64 object-cover">
+                <span id="modal-category" class="absolute top-4 left-4 bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-3 rounded-full"></span>
+                <button id="close-modal" class="absolute top-4 right-4 bg-black bg-opacity-50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-75">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 id="modal-title" class="text-2xl font-bold text-gray-800"></h2>
+                    <span id="modal-date" class="text-sm text-gray-600"></span>
+                </div>
+                <div class="mb-6">
+                    <p id="modal-description" class="text-gray-700 leading-relaxed mb-4"></p>
+                    <div class="flex items-center space-x-1">
+                        <i class="fas fa-map-marker-alt text-red-500"></i>
+                        <span id="modal-location" class="text-gray-600"></span>
+                    </div>
+                </div>
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Event Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Time</h4>
+                                <p id="modal-time" class="text-gray-600">7:00 PM - 10:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-user-friends text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Organizer</h4>
+                                <p id="modal-organizer" class="text-gray-600">EventHub</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-ticket-alt text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Price</h4>
+                                <p id="modal-price" class="text-gray-600">$25 - $75</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Capacity</h4>
+                                <p id="modal-capacity" class="text-gray-600">250 people</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between">
+                    <button class="py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                        <i class="far fa-heart mr-1"></i> Save
+                    </button>
+                    <button class="py-2 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition">
+                        <i class="fas fa-ticket-alt mr-1"></i> Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-calendar-check text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold">EventHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating memorable events made simple.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Event Planning Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Support Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest events and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 rounded-r-lg px-4 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Event database (simulated)
+        const eventData = {
+            1: {
+                title: "Web Development Summit",
+                category: "Tech",
+                date: "Oct 15-17, 2023",
+                time: "9:00 AM - 5:00 PM",
+                location: "New York City",
+                description: "Join industry leaders for the latest in web technologies and development practices. This summit brings together experts from around the world to discuss cutting-edge techniques, tools, and trends in web development. Network with professionals, attend workshops, and learn from the best in the industry.",
+                image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                organizer: "TechEvents Inc.",
+                price: "$199 - $299",
+                capacity: "500 people"
+            },
+            2: {
+                title: "Summer Music Festival",
+                category: "Music",
+                date: "Nov 5-6, 2023",
+                time: "12:00 PM - 11:00 PM",
+                location: "Los Angeles",
+                description: "Three days of amazing performances from top artists across multiple genres. Experience live music, food vendors, art installations, and more in this unforgettable outdoor festival. Bring your friends and enjoy the atmosphere of one of the biggest music events of the year.",
+                image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                organizer: "MusicFest Productions",
+                price: "$149 - $349",
+                capacity: "10,000 people"
+            },
+            3: {
+                title: "Entrepreneurship Workshop",
+                category: "Business",
+                date: "Dec 10, 2023",
+                time: "10:00 AM - 4:00 PM",
+                location: "Chicago",
+                description: "Learn key strategies for growing your business from successful founders. This workshop is designed for both aspiring and established entrepreneurs looking to take their business to the next level. Gain insights on funding, marketing strategies, team building, and scaling operations.",
+                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+                organizer: "Business Growth Network",
+                price: "Free",
+                capacity: "120 people"
+            },
+            6: {
+                title: "International Food Festival",
+                category: "Food",
+                date: "Nov 20, 2023",
+                time: "11:00 AM - 9:00 PM",
+                location: "Miami",
+                description: "Taste cuisine from around the world as top chefs showcase their signature dishes. Explore over 50 food stalls representing cuisines from all continents, watch cooking demonstrations, and participate in culinary workshops. A feast for all the senses!",
+                image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                organizer: "Global Flavors Events",
+                price: "$25 entry + food purchases",
+                capacity: "5,000 people"
+            }
+        };
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Event details modal functionality
+            const viewDetailsButtons = document.querySelectorAll('.view-details');
+            const modal = document.getElementById('event-modal');
+            const closeModalButton = document.getElementById('close-modal');
+            
+            // Open modal with event details
+            if (viewDetailsButtons.length > 0) {
+                viewDetailsButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const eventId = this.getAttribute('data-event-id');
+                        const event = eventData[eventId];
+                        
+                        if (event) {
+                            // Populate modal with event data
+                            document.getElementById('modal-image').src = event.image;
+                            document.getElementById('modal-category').textContent = event.category;
+                            document.getElementById('modal-title').textContent = event.title;
+                            document.getElementById('modal-date').textContent = event.date;
+                            document.getElementById('modal-description').textContent = event.description;
+                            document.getElementById('modal-location').textContent = event.location;
+                            document.getElementById('modal-time').textContent = event.time;
+                            document.getElementById('modal-organizer').textContent = event.organizer;
+                            document.getElementById('modal-price').textContent = event.price;
+                            document.getElementById('modal-capacity').textContent = event.capacity;
+                            
+                            // Show modal
+                            modal.classList.remove('hidden');
+                            document.body.style.overflow = 'hidden'; // Prevent scrolling
+                        }
+                    });
+                });
+            }
+            
+            // Close modal
+            if (closeModalButton && modal) {
+                closeModalButton.addEventListener('click', function() {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore scrolling
+                });
+                
+                // Close modal when clicking outside the content
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

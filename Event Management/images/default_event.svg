@@ -1,0 +1,32 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <pattern id="dot-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="3" fill="rgba(255, 255, 255, 0.05)" />
+    </pattern>
+  </defs>
+  
+  <!-- Main Background -->
+  <rect width="800" height="400" fill="url(#bg-gradient)" />
+  
+  <!-- Pattern Overlay -->
+  <rect width="800" height="400" fill="url(#dot-pattern)" />
+  
+  <!-- Calendar Icon (SVG version) -->
+  <g transform="translate(365, 120)">
+    <rect x="0" y="0" width="70" height="70" rx="10" fill="white" />
+    <rect x="10" y="10" width="50" height="50" rx="5" fill="#4338ca" />
+    <rect x="20" y="25" width="10" height="10" rx="2" fill="white" />
+    <rect x="40" y="25" width="10" height="10" rx="2" fill="white" />
+    <rect x="20" y="40" width="10" height="10" rx="2" fill="white" />
+    <rect x="40" y="40" width="10" height="10" rx="2" fill="white" />
+  </g>
+  
+  <!-- Text Elements -->
+  <text x="400" y="240" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="white">EventHub</text>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="white">Create Unforgettable Experiences</text>
+</svg> 

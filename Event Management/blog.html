@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - EventHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-2xl text-yellow-300"></i>
+                <a href="index.html" class="text-2xl font-bold">EventHub</a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="events.html" class="hover:text-yellow-300 transition">Events</a>
+                <a href="create.html" class="hover:text-yellow-300 transition">Create</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="signin.html" class="py-2 px-4 border border-white text-white hover:bg-white hover:text-indigo-800 rounded-lg transition font-semibold">Sign In</a>
+                <a href="signup.html" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-indigo-900 rounded-lg shadow-md transition font-semibold">Sign Up</a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-700 py-12 text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold">EventHub Blog</h1>
+            <p class="mt-2 text-lg">Insights, tips, and trends for successful event planning</p>
+        </div>
+    </header>
+
+    <!-- Blog Posts Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Main Content -->
+                <div class="w-full md:w-2/3">
+                    <!-- Featured Post -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Event Planning" class="w-full h-80 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-sm font-semibold py-1 px-3 rounded-full">Event Planning</span>
+                                <span class="text-sm text-gray-600 ml-4"><i class="far fa-calendar mr-1"></i> Oct 15, 2023</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-800 mb-3">10 Tips for Planning a Successful Corporate Event</h2>
+                            <p class="text-gray-600 mb-4">Corporate events are an excellent opportunity to bring your team together, impress clients, and strengthen your brand. But planning a successful corporate event requires careful planning and attention to detail...</p>
+                            <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Blog Post 1 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Virtual Events" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold py-1 px-3 rounded-full">Virtual Events</span>
+                                    <span class="text-sm text-gray-600 ml-4"><i class="far fa-calendar mr-1"></i> Oct 10, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">How to Host Engaging Virtual Events</h3>
+                                <p class="text-gray-600 mb-4">Virtual events have become a permanent fixture in the event landscape. Learn how to make your online events engaging and memorable...</p>
+                                <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 2 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Event Marketing" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-green-100 text-green-800 text-sm font-semibold py-1 px-3 rounded-full">Marketing</span>
+                                    <span class="text-sm text-gray-600 ml-4"><i class="far fa-calendar mr-1"></i> Oct 5, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">7 Effective Strategies for Event Promotion</h3>
+                                <p class="text-gray-600 mb-4">Discover proven strategies to market your event effectively and boost attendance. From social media to email campaigns...</p>
+                                <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 3 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Music Festivals" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-3 rounded-full">Entertainment</span>
+                                    <span class="text-sm text-gray-600 ml-4"><i class="far fa-calendar mr-1"></i> Sep 28, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">The Ultimate Guide to Planning a Music Festival</h3>
+                                <p class="text-gray-600 mb-4">From booking artists to managing logistics, learn everything you need to know to organize a successful music festival...</p>
+                                <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 4 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Food Events" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold py-1 px-3 rounded-full">Food Events</span>
+                                    <span class="text-sm text-gray-600 ml-4"><i class="far fa-calendar mr-1"></i> Sep 20, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Organizing Successful Food Festivals and Tastings</h3>
+                                <p class="text-gray-600 mb-4">Food festivals require special planning considerations. Explore the unique aspects of organizing culinary events...</p>
+                                <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="flex justify-center mt-12">
+                        <div class="flex space-x-2">
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 transition">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-600 text-white">1</a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 transition">2</a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 transition">3</a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 transition">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="w-full md:w-1/3">
+                    <!-- Search Box -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">Search</h3>
+                            <div class="flex">
+                                <input type="text" placeholder="Search articles..." class="px-4 py-2 w-full rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 rounded-r-lg transition">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">Categories</h3>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="text-indigo-600 hover:text-indigo-800 transition">Event Planning (12)</a></li>
+                                <li><a href="#" class="text-indigo-600 hover:text-indigo-800 transition">Virtual Events (8)</a></li>
+                                <li><a href="#" class="text-indigo-600 hover:text-indigo-800 transition">Marketing (10)</a></li>
+                                <li><a href="#" class="text-indigo-600 hover:text-indigo-800 transition">Technology (7)</a></li>
+                                <li><a href="#" class="text-indigo-600 hover:text-indigo-800 transition">Entertainment (9)</a></li>
+                                <li><a href="#" class="text-indigo-600 hover:text-indigo-800 transition">Food Events (6)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Popular Posts -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">Popular Posts</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Event Tech" class="w-20 h-20 object-cover rounded-lg mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">The Future of Event Technology</h4>
+                                        <p class="text-sm text-gray-600">Sep 15, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="COVID Events" class="w-20 h-20 object-cover rounded-lg mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Post-COVID Event Strategies</h4>
+                                        <p class="text-sm text-gray-600">Aug 30, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80" alt="Event ROI" class="w-20 h-20 object-cover rounded-lg mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Measuring Event ROI</h4>
+                                        <p class="text-sm text-gray-600">Aug 22, 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="bg-indigo-50 rounded-xl overflow-hidden">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Subscribe to Our Newsletter</h3>
+                            <p class="text-gray-600 mb-4">Get the latest event planning tips and trends delivered to your inbox.</p>
+                            <form>
+                                <input type="email" placeholder="Your email address" class="px-4 py-2 w-full rounded-lg mb-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <button class="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-calendar-check text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold">EventHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating memorable events made simple.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white transition">Support Center</a></li>
+                        <li><a href="api.html" class="text-gray-400 hover:text-white transition">API Documentation</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest events and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 rounded-r-lg px-4 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="cookies.html" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

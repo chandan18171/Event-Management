@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - EventHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-2xl text-yellow-300"></i>
+                <a href="index.html" class="text-2xl font-bold">EventHub</a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="events.html" class="hover:text-yellow-300 transition">Events</a>
+                <a href="create.html" class="hover:text-yellow-300 transition">Create</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="signin.html" class="py-2 px-4 border border-white text-white hover:bg-white hover:text-indigo-800 rounded-lg transition font-semibold">Sign In</a>
+                <a href="signup.html" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-indigo-900 rounded-lg shadow-md transition font-semibold">Sign Up</a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-700 py-12 text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold">Our Pricing Plans</h1>
+            <p class="mt-2 text-lg">Choose the perfect plan for your event needs</p>
+        </div>
+    </header>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Simple, Transparent Pricing</h2>
+                <p class="text-gray-600 mt-2">No hidden fees or charges - choose the plan that works for you</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 text-center border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Basic</h3>
+                        <p class="text-gray-600 mb-4">For small events</p>
+                        <div class="text-center">
+                            <span class="text-4xl font-bold text-indigo-600">Free</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Up to 50 attendees</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Basic event page</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Email notifications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">1 event organizer</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                                <span class="text-gray-500">Custom branding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                                <span class="text-gray-500">Analytics</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8 text-center">
+                            <a href="signup.html" class="py-2 px-6 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 inline-block">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan (Highlighted) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform scale-105 relative border-2 border-indigo-500 z-10">
+                    <div class="absolute top-0 right-0">
+                        <div class="bg-yellow-400 text-indigo-900 py-1 px-4 font-semibold text-sm transform rotate-45 translate-x-5 translate-y-1">Popular</div>
+                    </div>
+                    <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 p-6 text-center border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Pro</h3>
+                        <p class="text-gray-600 mb-4">For medium-sized events</p>
+                        <div class="text-center">
+                            <span class="text-4xl font-bold text-indigo-600">$29</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Up to 500 attendees</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Advanced event page</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Email & SMS notifications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">5 event organizers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Custom branding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Basic analytics</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8 text-center">
+                            <a href="signup.html" class="py-2 px-6 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 inline-block">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 text-center border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Premium</h3>
+                        <p class="text-gray-600 mb-4">For large events</p>
+                        <div class="text-center">
+                            <span class="text-4xl font-bold text-indigo-600">$99</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Unlimited attendees</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Premium event page</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">All notification channels</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Unlimited organizers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Advanced branding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Advanced analytics</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8 text-center">
+                            <a href="signup.html" class="py-2 px-6 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 inline-block">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto mt-16 bg-indigo-50 p-8 rounded-xl text-center">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Need a Custom Solution?</h3>
+                <p class="text-gray-600 mb-6">We offer tailored packages for enterprise customers and special events.</p>
+                <a href="contact.html" class="py-2 px-6 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 inline-block">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Frequently Asked Questions</h2>
+                <p class="text-gray-600 mt-2">Find answers to common questions about our pricing</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">How do I upgrade or downgrade my plan?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">You can upgrade or downgrade your plan at any time from your account settings. The price difference will be prorated based on the time remaining in your billing period.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">Is there a free trial available?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Yes, all paid plans come with a 14-day free trial. No credit card is required to start your trial. You can upgrade to a paid plan anytime during or after your trial period.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">Do you offer refunds?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">We offer a 30-day money-back guarantee for all paid plans. If you're not satisfied with our service within the first 30 days, you can request a full refund by contacting our support team.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-xl font-bold text-gray-800">What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers for annual plans. All payments are processed securely through our payment providers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join thousands of event organizers who trust EventHub for their events.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="signup.html" class="py-3 px-8 bg-white text-indigo-700 font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all duration-300">Sign Up for Free</a>
+                <a href="contact.html" class="py-3 px-8 bg-yellow-500 text-indigo-900 font-bold rounded-full shadow-lg hover:bg-yellow-400 hover:scale-105 hover:shadow-xl transition-all duration-300">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-calendar-check text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold">EventHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating memorable events made simple.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white transition">Support Center</a></li>
+                        <li><a href="api.html" class="text-gray-400 hover:text-white transition">API Documentation</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest events and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 rounded-r-lg px-4 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="cookies.html" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Toggle functionality
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

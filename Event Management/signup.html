@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - EventHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-2xl text-yellow-300"></i>
+                <a href="index.html" class="text-2xl font-bold">EventHub</a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="events.html" class="hover:text-yellow-300 transition">Events</a>
+                <a href="create.html" class="hover:text-yellow-300 transition">Create</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="signup.html" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-indigo-900 rounded-lg shadow-md transition font-semibold">Sign Up</a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Form Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
+                <div class="bg-gradient-to-r from-purple-700 to-indigo-800 py-6 px-6 text-white">
+                    <h2 class="text-2xl font-bold text-center">Create Your Account</h2>
+                    <p class="text-center text-indigo-100 mt-2">Join EventHub and start hosting amazing events</p>
+                </div>
+                <div class="p-8">
+                    <!-- Social Sign Up Options -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <button class="flex items-center justify-center py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f mr-2"></i>
+                            <span>Facebook</span>
+                        </button>
+                        <button class="flex items-center justify-center py-3 px-4 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition border border-gray-300">
+                            <i class="fab fa-google mr-2 text-red-500"></i>
+                            <span>Google</span>
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center my-6">
+                        <div class="flex-grow h-px bg-gray-300"></div>
+                        <span class="px-4 text-sm text-gray-500">or sign up with email</span>
+                        <div class="flex-grow h-px bg-gray-300"></div>
+                    </div>
+                    
+                    <!-- Signup Form -->
+                    <form id="signupForm" action="register.php" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
+                            <div class="relative">
+                                <input type="password" id="password" name="password" placeholder="Create a strong password" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                <button type="button" id="togglePassword" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="mt-2 text-sm text-gray-600">Password must be at least 8 characters long and include a number and a special character.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-medium mb-2">I want to sign up as:</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="user_type" value="user" class="form-radio h-5 w-5 text-indigo-600" checked>
+                                    <span class="ml-2 text-gray-700">User</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="user_type" value="organizer" class="form-radio h-5 w-5 text-indigo-600">
+                                    <span class="ml-2 text-gray-700">Organizer</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="terms" class="form-checkbox h-5 w-5 text-indigo-600">
+                                <span class="ml-2 text-gray-700">I agree to the <a href="#" class="text-indigo-600 hover:text-indigo-800">Terms of Service</a> and <a href="#" class="text-indigo-600 hover:text-indigo-800">Privacy Policy</a>.</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition duration-300 font-semibold">
+                            Create Account
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600">Already have an account? <a href="signin.html" class="text-indigo-600 hover:text-indigo-800 font-medium">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefits Section -->
+            <div class="max-w-3xl mx-auto mt-16">
+                <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Why Join EventHub?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-calendar-alt text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Create Events</h4>
+                        <p class="text-gray-600 text-center">Easily create and manage events of any size or type.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-ticket-alt text-purple-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Sell Tickets</h4>
+                        <p class="text-gray-600 text-center">Set up ticket sales and manage registrations in one place.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-chart-line text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Track Performance</h4>
+                        <p class="text-gray-600 text-center">Get insights and analytics about your event's performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-calendar-check text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold">EventHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating memorable events made simple.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Event Planning Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Support Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest events and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 rounded-r-lg px-4 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle password visibility
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+            
+            if (togglePassword && passwordInput) {
+                togglePassword.addEventListener('click', () => {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    togglePassword.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+                });
+            }
+            
+            <?php
+            // Display error or success messages if set in session
+            session_start();
+            if(isset($_SESSION['error'])) {
+                echo "alert('" . addslashes($_SESSION['error']) . "');";
+                unset($_SESSION['error']);
+            }
+            if(isset($_SESSION['success'])) {
+                echo "alert('" . addslashes($_SESSION['success']) . "');";
+                unset($_SESSION['success']);
+            }
+            ?>
+            
+            // Form validation
+            const signupForm = document.getElementById('signupForm');
+            
+            if (signupForm) {
+                signupForm.addEventListener('submit', function(e) {
+                    // Get form values
+                    const fullName = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const password = document.getElementById('password').value;
+                    const termsCheckbox = document.querySelector('input[name="terms"]');
+                    
+                    // Validate
+                    let valid = true;
+                    let errorMessage = '';
+                    
+                    if (!fullName) {
+                        valid = false;
+                        errorMessage += 'Please enter your full name.\n';
+                    }
+                    
+                    if (!email) {
+                        valid = false;
+                        errorMessage += 'Please enter your email address.\n';
+                    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                        valid = false;
+                        errorMessage += 'Please enter a valid email address.\n';
+                    }
+                    
+                    if (!password) {
+                        valid = false;
+                        errorMessage += 'Please create a password.\n';
+                    } else if (password.length < 8) {
+                        valid = false;
+                        errorMessage += 'Password must be at least 8 characters long.\n';
+                    } else if (!/[0-9]/.test(password) || !/[!@#$%^&*]/.test(password)) {
+                        valid = false;
+                        errorMessage += 'Password must include at least one number and one special character.\n';
+                    }
+                    
+                    if (termsCheckbox && !termsCheckbox.checked) {
+                        valid = false;
+                        errorMessage += 'Please agree to the Terms of Service and Privacy Policy.\n';
+                    }
+                    
+                    if (!valid) {
+                        e.preventDefault();
+                        alert(errorMessage);
+                        return;
+                    }
+                    
+                    // Change button appearance
+                    const submitButton = signupForm.querySelector('button[type="submit"]');
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Creating Account...';
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

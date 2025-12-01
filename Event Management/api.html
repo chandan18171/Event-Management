@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - EventHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-2xl text-yellow-300"></i>
+                <a href="index.html" class="text-2xl font-bold">EventHub</a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="events.html" class="hover:text-yellow-300 transition">Events</a>
+                <a href="create.html" class="hover:text-yellow-300 transition">Create</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="signin.html" class="py-2 px-4 border border-white text-white hover:bg-white hover:text-indigo-800 rounded-lg transition font-semibold">Sign In</a>
+                <a href="signup.html" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-indigo-900 rounded-lg shadow-md transition font-semibold">Sign Up</a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-700 py-12 text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold">API Documentation</h1>
+            <p class="mt-2 text-lg">Integrate with EventHub's powerful event management platform</p>
+        </div>
+    </header>
+
+    <!-- API Overview Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Overview</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        The EventHub API allows developers to integrate EventHub's powerful event management capabilities into their own applications. With our API, you can create and manage events, handle registrations, process payments, and access analytics data programmatically.
+                    </p>
+                    <div class="mt-6 flex gap-4">
+                        <a href="#" class="py-2 px-6 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Get API Key</a>
+                        <a href="#" class="py-2 px-6 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-indigo-50 rounded-xl shadow-md mb-12">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Base URL</h3>
+                    <div class="bg-gray-800 text-green-400 p-4 rounded-md font-mono">
+                        https://api.eventhub.com/v1
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Authentication</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        All API requests must include your API key as a header. You can get your API key from the developer dashboard after signing up for an API account.
+                    </p>
+                    <div class="bg-gray-800 text-green-400 p-4 rounded-md font-mono">
+                        <span class="text-gray-400">// Example request with API key</span><br>
+                        curl -X GET \<br>
+                        &nbsp;&nbsp;-H "Authorization: Bearer YOUR_API_KEY" \<br>
+                        &nbsp;&nbsp;https://api.eventhub.com/v1/events
+                    </div>
+                </div>
+
+                <!-- API Endpoints Section -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Endpoints</h2>
+                    
+                    <!-- Events Endpoint -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden mb-8">
+                        <div class="flex items-center p-6 bg-gray-50 border-b border-gray-200">
+                            <div class="w-24 py-1 px-3 bg-green-100 text-green-800 text-sm font-semibold rounded-full mr-4">GET</div>
+                            <h3 class="text-lg font-bold text-gray-800">/events</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Returns a list of events. You can filter by various parameters such as date, category, and location.
+                            </p>
+                            <h4 class="font-semibold text-gray-800 mb-2">Query Parameters:</h4>
+                            <ul class="list-disc pl-6 text-gray-600 mb-4">
+                                <li><span class="font-mono text-sm">category</span> - Filter by event category</li>
+                                <li><span class="font-mono text-sm">date_start</span> - Filter by start date (ISO 8601 format)</li>
+                                <li><span class="font-mono text-sm">date_end</span> - Filter by end date (ISO 8601 format)</li>
+                                <li><span class="font-mono text-sm">location</span> - Filter by location</li>
+                                <li><span class="font-mono text-sm">limit</span> - Number of results per page (default: 20)</li>
+                                <li><span class="font-mono text-sm">page</span> - Page number (default: 1)</li>
+                            </ul>
+                            <h4 class="font-semibold text-gray-800 mb-2">Example Response:</h4>
+                            <div class="bg-gray-800 text-green-400 p-4 rounded-md font-mono text-sm">
+                                <pre>{
+  "events": [
+    {
+      "id": "evt_123456",
+      "title": "Web Development Summit",
+      "description": "Join industry leaders...",
+      "category": "Tech",
+      "start_date": "2023-10-15T09:00:00Z",
+      "end_date": "2023-10-17T17:00:00Z",
+      "location": "New York City",
+      "organizer_id": "org_789012",
+      "status": "published",
+      "created_at": "2023-07-01T12:00:00Z"
+    },
+    // More events...
+  ],
+  "meta": {
+    "total_count": 42,
+    "page": 1,
+    "limit": 20
+  }
+}</pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Create Event Endpoint -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden mb-8">
+                        <div class="flex items-center p-6 bg-gray-50 border-b border-gray-200">
+                            <div class="w-24 py-1 px-3 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full mr-4">POST</div>
+                            <h3 class="text-lg font-bold text-gray-800">/events</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Creates a new event with the specified parameters.
+                            </p>
+                            <h4 class="font-semibold text-gray-800 mb-2">Request Body:</h4>
+                            <div class="bg-gray-800 text-green-400 p-4 rounded-md font-mono text-sm mb-4">
+                                <pre>{
+  "title": "Web Development Summit",
+  "description": "Join industry leaders...",
+  "category": "Tech",
+  "start_date": "2023-10-15T09:00:00Z",
+  "end_date": "2023-10-17T17:00:00Z",
+  "location": "New York City",
+  "capacity": 500,
+  "is_public": true
+}</pre>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Response:</h4>
+                            <div class="bg-gray-800 text-green-400 p-4 rounded-md font-mono text-sm">
+                                <pre>{
+  "id": "evt_123456",
+  "title": "Web Development Summit",
+  "description": "Join industry leaders...",
+  "category": "Tech",
+  "start_date": "2023-10-15T09:00:00Z",
+  "end_date": "2023-10-17T17:00:00Z",
+  "location": "New York City",
+  "organizer_id": "org_789012",
+  "status": "draft",
+  "created_at": "2023-07-01T12:00:00Z"
+}</pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- More API endpoints would go here -->
+                    
+                    <div class="text-center mt-8">
+                        <a href="#" class="py-3 px-8 bg-indigo-100 text-indigo-700 rounded-full hover:bg-indigo-200 transition-all duration-300 font-semibold inline-flex items-center">
+                            View All Endpoints
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- SDKs Section -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Client Libraries</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        We provide official client libraries for several programming languages to make integration even easier.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <a href="#" class="flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 mr-4">
+                                <i class="fab fa-js text-4xl text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">JavaScript</h3>
+                                <p class="text-gray-600 text-sm">npm install eventhub-js</p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 mr-4">
+                                <i class="fab fa-python text-4xl text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Python</h3>
+                                <p class="text-gray-600 text-sm">pip install eventhub-python</p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 mr-4">
+                                <i class="fab fa-php text-4xl text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">PHP</h3>
+                                <p class="text-gray-600 text-sm">composer require eventhub/php</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Webhooks Section -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Webhooks</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        EventHub can send webhook notifications to your application when certain events occur. This allows you to build real-time integrations with our platform.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Available Webhook Events</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                <span class="font-mono bg-gray-100 px-2 py-1 rounded text-sm mr-2">event.created</span>
+                                <span class="text-gray-600">Triggered when a new event is created</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                <span class="font-mono bg-gray-100 px-2 py-1 rounded text-sm mr-2">event.updated</span>
+                                <span class="text-gray-600">Triggered when an event is updated</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                <span class="font-mono bg-gray-100 px-2 py-1 rounded text-sm mr-2">registration.new</span>
+                                <span class="text-gray-600">Triggered when an attendee registers for an event</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                <span class="font-mono bg-gray-100 px-2 py-1 rounded text-sm mr-2">payment.success</span>
+                                <span class="text-gray-600">Triggered when a payment is successfully processed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-calendar-check text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold">EventHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating memorable events made simple.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white transition">Support Center</a></li>
+                        <li><a href="api.html" class="text-gray-400 hover:text-white transition">API Documentation</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest events and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 rounded-r-lg px-4 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="cookies.html" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

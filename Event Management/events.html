@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - EventHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-2xl text-yellow-300"></i>
+                <a href="index.html" class="text-2xl font-bold">EventHub</a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="events.html" class="hover:text-yellow-300 transition text-yellow-300">Events</a>
+                <a href="create.html" class="hover:text-yellow-300 transition">Create</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="signup.html" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-indigo-900 rounded-lg shadow-md transition font-semibold">Sign Up</a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-700 py-12 text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold">Discover Amazing Events</h1>
+            <p class="mt-2 text-lg">Find the perfect events to attend in your area</p>
+        </div>
+    </header>
+
+    <!-- Filter & Search Section -->
+    <section class="bg-white shadow-md">
+        <div class="container mx-auto py-6 px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="w-full md:w-auto flex flex-wrap gap-2">
+                    <button class="py-2 px-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition font-medium">All Events</button>
+                    <button class="py-2 px-4 bg-indigo-100 text-indigo-800 rounded-full hover:bg-indigo-200 transition font-medium">Music</button>
+                    <button class="py-2 px-4 bg-indigo-100 text-indigo-800 rounded-full hover:bg-indigo-200 transition font-medium">Tech</button>
+                    <button class="py-2 px-4 bg-indigo-100 text-indigo-800 rounded-full hover:bg-indigo-200 transition font-medium">Business</button>
+                    <button class="py-2 px-4 bg-indigo-100 text-indigo-800 rounded-full hover:bg-indigo-200 transition font-medium">Sports</button>
+                </div>
+                <div class="w-full md:w-64">
+                    <div class="relative">
+                        <input type="text" placeholder="Search events..." class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <button class="absolute right-2 top-2 text-gray-500">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Tech Conference" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-indigo-900 font-bold py-1 px-3 rounded-full">
+                            Premium
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-3 rounded-full">Tech</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 24 Oct 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Web Development Summit</h3>
+                        <p class="text-gray-600 mb-4">Join industry leaders for the latest in web technologies and development practices.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">New York, NY</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="1">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 8h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Music Festival" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold py-1 px-3 rounded-full">Music</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 15 Nov 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Summer Music Festival</h3>
+                        <p class="text-gray-600 mb-4">Three days of amazing performances from top artists across multiple genres.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Los Angeles, CA</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="2">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 11h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Business Workshop" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white font-bold py-1 px-3 rounded-full">
+                            Free
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-sm font-semibold py-1 px-3 rounded-full">Business</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 5 Dec 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Entrepreneurship Workshop</h3>
+                        <p class="text-gray-600 mb-4">Learn key strategies for growing your business from successful founders.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Chicago, IL</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="3">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 6h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Fitness Event" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white font-bold py-1 px-3 rounded-full">
+                            Hot
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-red-100 text-red-800 text-sm font-semibold py-1 px-3 rounded-full">Sports</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 12 Nov 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Marathon Challenge 2023</h3>
+                        <p class="text-gray-600 mb-4">Challenge yourself in this city-wide marathon with athletes from around the world.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Boston, MA</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="4">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 7h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556125574-d7f27ec36a06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Art Exhibition" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-pink-100 text-pink-800 text-sm font-semibold py-1 px-3 rounded-full">Art</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 18 Nov 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Modern Art Exhibition</h3>
+                        <p class="text-gray-600 mb-4">Experience contemporary art from emerging and established artists in this stunning exhibition.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">San Francisco, CA</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="5">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 10h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Food Festival" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-indigo-900 font-bold py-1 px-3 rounded-full">
+                            Popular
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold py-1 px-3 rounded-full">Food</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 25 Nov 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">International Food Festival</h3>
+                        <p class="text-gray-600 mb-4">Taste cuisine from around the world as top chefs showcase their signature dishes.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Miami, FL</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="6">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 10h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 7 (Page 2) -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Tech Meetup" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-3 rounded-full">Tech</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 8 Dec 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">AI and Machine Learning Meetup</h3>
+                        <p class="text-gray-600 mb-4">Connect with professionals and enthusiasts in the AI and machine learning community.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Seattle, WA</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="7">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 2.5h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 8 (Page 2) -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Education Conference" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white font-bold py-1 px-3 rounded-full">
+                            Featured
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold py-1 px-3 rounded-full">Education</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 12 Dec 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Education Innovation Summit</h3>
+                        <p class="text-gray-600 mb-4">Discover the latest trends and innovations in education technology and teaching methods.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Austin, TX</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="8">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 8h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 9 (Page 2) -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1507878866276-a947ef722fee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Gaming Convention" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white font-bold py-1 px-3 rounded-full">
+                            New
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-sm font-semibold py-1 px-3 rounded-full">Gaming</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 20 Dec 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">GameCon 2023</h3>
+                        <p class="text-gray-600 mb-4">The biggest gaming convention with demos, competitions, and exclusive game releases.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Las Vegas, NV</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="9">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 10h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 10 (Page 2) -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Wedding Expo" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-pink-100 text-pink-800 text-sm font-semibold py-1 px-3 rounded-full">Wedding</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 7 Jan 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Wedding Expo & Fashion Show</h3>
+                        <p class="text-gray-600 mb-4">Discover the latest wedding trends, fashion, and vendors for your special day.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Orlando, FL</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="10">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 7h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 11 (Page 2) -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560439513-74b037a25d84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Health Summit" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white font-bold py-1 px-3 rounded-full">
+                            Limited
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-3 rounded-full">Health</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 15 Jan 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Wellness & Health Summit</h3>
+                        <p class="text-gray-600 mb-4">A holistic approach to health with experts in nutrition, fitness, and mental wellness.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Denver, CO</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="11">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 8h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 12 (Page 2) -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl event-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Comedy Show" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold py-1 px-3 rounded-full">Comedy</span>
+                            <span class="text-sm text-gray-600"><i class="far fa-calendar mr-1"></i> 22 Jan 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Stand-Up Comedy Night</h3>
+                        <p class="text-gray-600 mb-4">An evening of laughter with top comedians performing their best material.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="text-gray-600 text-sm">Portland, OR</span>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="#" class="view-details text-indigo-600 hover:text-indigo-800 text-sm font-medium" data-event-id="12">View Details</a>
+                                <span class="text-gray-500 text-sm flex items-center">
+                                    <i class="far fa-clock mr-1"></i> 2.5h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination Controls -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex space-x-2">
+                    <a href="#" class="pagination-link prev-page px-3 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 flex items-center">
+                        <i class="fas fa-chevron-left text-xs"></i>
+                    </a>
+                    <a href="#" class="pagination-link px-3 py-2 bg-indigo-600 border border-indigo-600 text-white rounded-md" data-page="1">1</a>
+                    <a href="#" class="pagination-link px-3 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50" data-page="2">2</a>
+                    <a href="#" class="pagination-link px-3 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50" data-page="3">3</a>
+                    <a href="#" class="pagination-link next-page px-3 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 flex items-center">
+                        <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-calendar-check text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold">EventHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating memorable events made simple.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Event Planning Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Support Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest events and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 rounded-r-lg px-4 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Event Details Modal -->
+    <div id="event-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl shadow-xl max-w-3xl w-full mx-4 overflow-hidden">
+            <div class="relative">
+                <img id="modal-image" src="" alt="Event" class="w-full h-64 object-cover">
+                <span id="modal-category" class="absolute top-4 left-4 bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-3 rounded-full"></span>
+                <button id="close-modal" class="absolute top-4 right-4 bg-black bg-opacity-50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-75">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 id="modal-title" class="text-2xl font-bold text-gray-800"></h2>
+                    <span id="modal-date" class="text-sm text-gray-600"></span>
+                </div>
+                <div class="mb-6">
+                    <p id="modal-description" class="text-gray-700 leading-relaxed mb-4"></p>
+                    <div class="flex items-center space-x-1">
+                        <i class="fas fa-map-marker-alt text-red-500"></i>
+                        <span id="modal-location" class="text-gray-600"></span>
+                    </div>
+                </div>
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Event Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Time</h4>
+                                <p id="modal-time" class="text-gray-600">7:00 PM - 10:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-user-friends text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Organizer</h4>
+                                <p id="modal-organizer" class="text-gray-600">EventHub</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-ticket-alt text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Price</h4>
+                                <p id="modal-price" class="text-gray-600">$25 - $75</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Capacity</h4>
+                                <p id="modal-capacity" class="text-gray-600">250 people</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between">
+                    <button class="py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                        <i class="far fa-heart mr-1"></i> Save
+                    </button>
+                    <button class="py-2 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:from-purple-700 hover:to-indigo-700 transition">
+                        <i class="fas fa-ticket-alt mr-1"></i> Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.py-2.px-4.rounded-full');
+            const searchInput = document.querySelector('input[placeholder="Search events..."]');
+            const eventCards = document.querySelectorAll('.event-card');
+            
+            // Filter by category buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Reset all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-indigo-600', 'text-white');
+                        btn.classList.add('bg-indigo-100', 'text-indigo-800');
+                    });
+                    
+                    // Set active button
+                    this.classList.remove('bg-indigo-100', 'text-indigo-800');
+                    this.classList.add('bg-indigo-600', 'text-white');
+                    
+                    const category = this.textContent.trim();
+                    
+                    // Show all events if "All Events" is selected
+                    if (category === 'All Events') {
+                        eventCards.forEach(card => {
+                            card.style.display = '';
+                        });
+                        initializePagination(); // Reset pagination after filtering
+                        showEventsForPage(1);
+                        return;
+                    }
+                    
+                    // Filter events by category
+                    eventCards.forEach(card => {
+                        const cardCategory = card.querySelector('span').textContent.trim();
+                        if (cardCategory === category) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Reset pagination after filtering
+                    initializePagination();
+                    showEventsForPage(1);
+                });
+            });
+            
+            // Search functionality
+            if (searchInput) {
+                searchInput.addEventListener('keyup', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    
+                    eventCards.forEach(card => {
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        const description = card.querySelector('p').textContent.toLowerCase();
+                        const location = card.querySelector('.fa-map-marker-alt').nextElementSibling.textContent.toLowerCase();
+                        
+                        if (title.includes(searchTerm) || description.includes(searchTerm) || location.includes(searchTerm)) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Reset pagination after searching
+                    initializePagination();
+                    showEventsForPage(1);
+                });
+            }
+
+            // Pagination functionality
+            const paginationLinks = document.querySelectorAll('.pagination-link');
+            const eventsPerPage = 6; // Number of events to show per page
+            let currentPage = 1;
+            let totalPages = Math.ceil(eventCards.length / eventsPerPage);
+            const prevPageButton = document.querySelector('.prev-page');
+            const nextPageButton = document.querySelector('.next-page');
+            
+            // Function to initialize/update pagination
+            function initializePagination() {
+                // Count visible events after filtering
+                const visibleEvents = Array.from(eventCards).filter(card => card.style.display !== 'none');
+                totalPages = Math.ceil(visibleEvents.length / eventsPerPage);
+                
+                // Update pagination numbers
+                paginationLinks.forEach(link => {
+                    if (!link.classList.contains('prev-page') && !link.classList.contains('next-page')) {
+                        const pageNumber = parseInt(link.getAttribute('data-page'));
+                        if (pageNumber <= totalPages) {
+                            link.style.display = '';
+                        } else {
+                            link.style.display = 'none';
+                        }
+                    }
+                });
+                
+                // Disable prev/next buttons if at first/last page
+                updatePrevNextButtons(1); // Start at page 1 after filtering
+            }
+            
+            // Function to update prev/next buttons
+            function updatePrevNextButtons(pageNumber) {
+                if (pageNumber === 1) {
+                    prevPageButton.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    prevPageButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+                
+                if (pageNumber === totalPages) {
+                    nextPageButton.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    nextPageButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+            }
+            
+            // Function to show events for the current page
+            function showEventsForPage(pageNumber) {
+                // First filter out hidden events (from category/search filters)
+                const visibleEvents = Array.from(eventCards).filter(card => card.style.display !== 'none');
+                
+                // Calculate start and end indices
+                const startIndex = (pageNumber - 1) * eventsPerPage;
+                const endIndex = startIndex + eventsPerPage;
+                
+                // Hide all visible events
+                visibleEvents.forEach(card => {
+                    card.style.display = 'none';
+                });
+                
+                // Show events for current page
+                visibleEvents.slice(startIndex, endIndex).forEach(card => {
+                    card.style.display = '';
+                });
+                
+                // Update active page indicator
+                paginationLinks.forEach(link => {
+                    if (!link.classList.contains('prev-page') && !link.classList.contains('next-page')) {
+                        if (parseInt(link.getAttribute('data-page')) === pageNumber) {
+                            link.classList.add('bg-indigo-600', 'border-indigo-600', 'text-white');
+                            link.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-50');
+                        } else {
+                            link.classList.remove('bg-indigo-600', 'border-indigo-600', 'text-white');
+                            link.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-50', 'border-gray-300');
+                        }
+                    }
+                });
+                
+                // Update prev/next buttons
+                updatePrevNextButtons(pageNumber);
+                
+                // Update current page
+                currentPage = pageNumber;
+            }
+            
+            // Add click event listeners to pagination links
+            paginationLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (this.classList.contains('prev-page')) {
+                        if (currentPage > 1) {
+                            showEventsForPage(currentPage - 1);
+                        }
+                    } else if (this.classList.contains('next-page')) {
+                        if (currentPage < totalPages) {
+                            showEventsForPage(currentPage + 1);
+                        }
+                    } else {
+                        const pageNumber = parseInt(this.getAttribute('data-page'));
+                        showEventsForPage(pageNumber);
+                    }
+                });
+            });
+            
+            // Event details modal functionality
+            const viewDetailsButtons = document.querySelectorAll('.view-details');
+            const modal = document.getElementById('event-modal');
+            const closeModalButton = document.getElementById('close-modal');
+            
+            // Event database (simulated)
+            const eventData = {
+                1: {
+                    title: "Web Development Summit",
+                    category: "Tech",
+                    date: "24 Oct 2023",
+                    time: "9:00 AM - 5:00 PM",
+                    location: "New York, NY",
+                    description: "Join industry leaders for the latest in web technologies and development practices. This summit brings together experts from around the world to discuss cutting-edge techniques, tools, and trends in web development. Network with professionals, attend workshops, and learn from the best in the industry.",
+                    image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "TechEvents Inc.",
+                    price: "$199 - $299",
+                    capacity: "500 people"
+                },
+                2: {
+                    title: "Summer Music Festival",
+                    category: "Music",
+                    date: "15 Nov 2023",
+                    time: "12:00 PM - 11:00 PM",
+                    location: "Los Angeles, CA",
+                    description: "Three days of amazing performances from top artists across multiple genres. Experience live music, food vendors, art installations, and more in this unforgettable outdoor festival. Bring your friends and enjoy the atmosphere of one of the biggest music events of the year.",
+                    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "MusicFest Productions",
+                    price: "$149 - $349",
+                    capacity: "10,000 people"
+                },
+                3: {
+                    title: "Entrepreneurship Workshop",
+                    category: "Business",
+                    date: "5 Dec 2023",
+                    time: "10:00 AM - 4:00 PM",
+                    location: "Chicago, IL",
+                    description: "Learn key strategies for growing your business from successful founders. This workshop is designed for both aspiring and established entrepreneurs looking to take their business to the next level. Gain insights on funding, marketing strategies, team building, and scaling operations.",
+                    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+                    organizer: "Business Growth Network",
+                    price: "Free",
+                    capacity: "120 people"
+                },
+                4: {
+                    title: "Marathon Challenge 2023",
+                    category: "Sports",
+                    date: "12 Nov 2023",
+                    time: "7:00 AM - 2:00 PM",
+                    location: "Boston, MA",
+                    description: "Challenge yourself in this city-wide marathon with athletes from around the world. Run through historic streets and neighborhoods while challenging yourself to reach new personal records. This USATF-certified course features aid stations, medical support, and cheering crowds throughout.",
+                    image: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+                    organizer: "Boston Athletic Association",
+                    price: "$75 - $150",
+                    capacity: "25,000 runners"
+                },
+                5: {
+                    title: "Modern Art Exhibition",
+                    category: "Art",
+                    date: "18 Nov 2023",
+                    time: "10:00 AM - 8:00 PM",
+                    location: "San Francisco, CA",
+                    description: "Experience contemporary art from emerging and established artists in this stunning exhibition. The exhibition showcases a diverse range of mediums including paintings, sculptures, digital art, and installations that challenge conventional perspectives and inspire creativity.",
+                    image: "https://images.unsplash.com/photo-1556125574-d7f27ec36a06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "SF Modern Gallery",
+                    price: "$22",
+                    capacity: "200 people per hour"
+                },
+                6: {
+                    title: "International Food Festival",
+                    category: "Food",
+                    date: "25 Nov 2023",
+                    time: "11:00 AM - 9:00 PM",
+                    location: "Miami, FL",
+                    description: "Taste cuisine from around the world as top chefs showcase their signature dishes. Explore over 50 food stalls representing cuisines from all continents, watch cooking demonstrations, and participate in culinary workshops. A feast for all the senses!",
+                    image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "Global Flavors Events",
+                    price: "$25 entry + food purchases",
+                    capacity: "5,000 people"
+                },
+                7: {
+                    title: "AI and Machine Learning Meetup",
+                    category: "Tech",
+                    date: "8 Dec 2023",
+                    time: "6:30 PM - 9:00 PM",
+                    location: "Seattle, WA",
+                    description: "Connect with professionals and enthusiasts in the AI and machine learning community. This monthly meetup features expert speakers, demo presentations, and networking opportunities. Perfect for data scientists, developers, and anyone interested in the future of artificial intelligence.",
+                    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "Seattle AI Group",
+                    price: "Free",
+                    capacity: "150 people"
+                },
+                8: {
+                    title: "Education Innovation Summit",
+                    category: "Education",
+                    date: "12 Dec 2023",
+                    time: "8:30 AM - 4:30 PM",
+                    location: "Austin, TX",
+                    description: "Discover the latest trends and innovations in education technology and teaching methods. Join educators, administrators, policymakers, and edtech companies to explore how technology is transforming learning experiences from K-12 to higher education and professional development.",
+                    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "EdTech Alliance",
+                    price: "$249 - $349",
+                    capacity: "400 people"
+                },
+                9: {
+                    title: "GameCon 2023",
+                    category: "Gaming",
+                    date: "20 Dec 2023",
+                    time: "10:00 AM - 8:00 PM",
+                    location: "Las Vegas, NV",
+                    description: "The biggest gaming convention with demos, competitions, and exclusive game releases. Experience hands-on demos of upcoming titles, meet game developers, participate in tournaments, and get exclusive merchandise. For casual gamers and pros alike!",
+                    image: "https://images.unsplash.com/photo-1507878866276-a947ef722fee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+                    organizer: "GameWorld Events",
+                    price: "$45 per day / $120 full pass",
+                    capacity: "15,000 people"
+                },
+                10: {
+                    title: "Wedding Expo & Fashion Show",
+                    category: "Wedding",
+                    date: "7 Jan 2024",
+                    time: "11:00 AM - 6:00 PM",
+                    location: "Orlando, FL",
+                    description: "Discover the latest wedding trends, fashion, and vendors for your special day. Meet over 100 wedding professionals from venues to photographers, caterers, florists, and more. Watch stunning bridal fashion shows and get inspired for your dream wedding.",
+                    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+                    organizer: "Perfect Day Events",
+                    price: "$15 general / $35 VIP",
+                    capacity: "2,000 people"
+                },
+                11: {
+                    title: "Wellness & Health Summit",
+                    category: "Health",
+                    date: "15 Jan 2024",
+                    time: "9:00 AM - 5:00 PM",
+                    location: "Denver, CO",
+                    description: "A holistic approach to health with experts in nutrition, fitness, and mental wellness. Participate in workshops on mindfulness, hear from leading health experts, try fitness activities, and explore exhibitors offering the latest in wellness products and services.",
+                    image: "https://images.unsplash.com/photo-1560439513-74b037a25d84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "Whole Health Organization",
+                    price: "$85 - $150",
+                    capacity: "750 people"
+                },
+                12: {
+                    title: "Stand-Up Comedy Night",
+                    category: "Comedy",
+                    date: "22 Jan 2024",
+                    time: "8:00 PM - 10:30 PM",
+                    location: "Portland, OR",
+                    description: "An evening of laughter with top comedians performing their best material. Featuring a lineup of nationally recognized comics and rising stars, this show promises non-stop entertainment in an intimate venue with full bar service available.",
+                    image: "https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                    organizer: "Laugh Factory Productions",
+                    price: "$25 - $45",
+                    capacity: "300 people"
+                }
+            };
+            
+            // Open modal with event details
+            viewDetailsButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const eventId = this.getAttribute('data-event-id');
+                    const event = eventData[eventId];
+                    
+                    if (event) {
+                        // Populate modal with event data
+                        document.getElementById('modal-image').src = event.image;
+                        document.getElementById('modal-category').textContent = event.category;
+                        document.getElementById('modal-title').textContent = event.title;
+                        document.getElementById('modal-date').textContent = event.date;
+                        document.getElementById('modal-description').textContent = event.description;
+                        document.getElementById('modal-location').textContent = event.location;
+                        document.getElementById('modal-time').textContent = event.time;
+                        document.getElementById('modal-organizer').textContent = event.organizer;
+                        document.getElementById('modal-price').textContent = event.price;
+                        document.getElementById('modal-capacity').textContent = event.capacity;
+                        
+                        // Show modal
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    }
+                });
+            });
+            
+            // Close modal
+            closeModalButton.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+            
+            // Close modal when clicking outside the content
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Initialize with page 1
+            showEventsForPage(1);
+        });
+    </script>
+</body>
+</html> 
